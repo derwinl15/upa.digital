@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME}.php -f
+	RewriteRule ^(.*)$ $1.php
+</IfModule>
+
+RewriteEngine On
+
+#RewriteBase /
+RewriteBase /upa.digital
+
+#RewriteRule ^servicio/([A-Za-z0-9-]+) articulos.php?id=$1
+RewriteRule ^blog/([A-Za-z0-9-]+) blogdetalle.php?url=$1 
+RewriteRule ^solucion/([A-Za-z0-9-]+) soluciondetalle.php?url=$1 
+RewriteRule ^([A-Za-z0-9-]+)$ pagedetalle.php?url=$1 [L]
+
+RewriteRule ^sitio/([A-Za-z0-9-]+)/blog/([A-Za-z0-9-]+) sitioweb.php?co=$1&tipo=blog&url=$2
+RewriteRule ^sitio/([A-Za-z0-9-]+)/servicio/([A-Za-z0-9-]+) sitioweb.php?co=$1&tipo=servicio&url=$2
+RewriteRule ^sitio/([A-Za-z0-9-]+)/([A-Za-z0-9-]+) sitioweb.php?co=$1&url=$2
+RewriteRule ^sitio/([A-Za-z0-9-]+) sitioweb.php?co=$1&tipo=index

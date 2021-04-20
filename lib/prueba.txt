@@ -1,0 +1,112 @@
+INSERT INTO 
+      notificacion
+        (notif_tabla, modulo_id, elemento_id, notif_titulo, notif_descrip, notif_fechareg, l_estatus_id, usuario_idorigen, usuario_iddestino, usuario_idreg, cuenta_id, compania_id, 
+          notif_activo, notif_eliminado, notif_notificadoemail, notif_leido, notif_visible,
+          l_tiponotif_id, notif_email, notif_telf)
+       VALUES ('usuario', '32', '197', 'Confirmacion Registro - TodoFacil', '
+        
+          <table border=\'0\' width=\'100%\' cellpadding=\'0\' cellspacing=\'0\' bgcolor=\'ffffff\' class=\'bg_color\'>
+
+              <tr>
+                  <td align=\'center\'>
+                      <table border=\'0\' align=\'center\' width=\'590\' cellpadding=\'0\' cellspacing=\'0\' class=\'container590\'>
+                          
+                          <tr>
+                              <td align=\'left\' style=\'color: #343434; font-size: 16px; font-family: Calibri, sans-serif; font-weight:normal;letter-spacing: 2px; line-height: 35px;\' class=\'main-header\'>
+                                  <div style=\'line-height: 35px\'>
+
+                                      Daniel , Confirma tu <span style=\'color: #3E87AB;\'>EMAIL</span>
+
+                                  </div>
+                              </td>
+                          </tr>
+
+                          <tr>
+                              <td height=\'10\' style=\'font-size: 10px; line-height: 10px;\'>&nbsp;</td>
+                          </tr>
+
+                          <tr>
+                              <td align=\'center\'>
+                                  <table border=\'0\' width=\'40\' align=\'center\' cellpadding=\'0\' cellspacing=\'0\' bgcolor=\'eeeeee\'>
+                                      <tr>
+                                          <td height=\'2\' style=\'font-size: 2px; line-height: 2px;\'>&nbsp;</td>
+                                      </tr>
+                                  </table>
+                              </td>
+                          </tr>
+
+                          
+
+                          <tr>
+                              <td height=\'25\' style=\'font-size: 25px; line-height: 25px;\'>&nbsp;</td>
+                          </tr>
+
+                          
+                          <tr>
+                              <td align=\'center\'>
+                                  <table border=\'0\' align=\'center\' width=\'160\' cellpadding=\'0\' cellspacing=\'0\' bgcolor=\'0EB521\' style=\'\'>
+
+                                      <tr>
+                                          <td height=\'10\' style=\'font-size: 10px; line-height: 10px;\'>&nbsp;</td>
+                                      </tr>
+
+                                      <tr>
+                                          <td align=\'center\' style=\'color: #ffffff; font-size: 14px; font-family: Calibri, sans-serif; line-height: 26px;\'>
+
+
+                                              <div style=\'line-height: 26px;\'>
+                                                  <a href=\'https://www.sistemasgo.com/portfolio/todofacil/iniciar-sesion?cod=5e9260043c600\' style=\'color: #ffffff; text-decoration: none;\'>Confirmar Email</a>
+                                              </div>
+                                          </td>
+                                      </tr>
+
+                                      <tr>
+                                          <td height=\'10\' style=\'font-size: 10px; line-height: 10px;\'>&nbsp;</td>
+                                      </tr>
+
+                                  </table>
+                              </td>
+                          </tr>
+
+                          <tr>
+                              <td height=\'20\' style=\'font-size: 20px; line-height: 20px;\'>&nbsp;</td>
+                          </tr>
+
+                          <tr>
+                              <td align=\'center\'>
+                                  <table border=\'0\' width=\'500\' align=\'center\' cellpadding=\'0\' cellspacing=\'0\' class=\'container590\'>
+                                      <tr>
+                                          <td align=\'center\' style=\'color: #444444; font-size: 16px; font-family: Calibri, sans-serif; line-height: 24px;\'>
+
+
+                                              <div style=\'line-height: 24px\'>                                                  
+                                                  <br><br> Puede copiar y pegar el siguiente enlace si el boton anterior no le funciona<br>
+                                                  <a href=\'https://www.sistemasgo.com/portfolio/todofacil/iniciar-sesion?cod=5e9260043c600\'>
+                                                      https://www.sistemasgo.com/portfolio/todofacil/iniciar-sesion?cod=5e9260043c600
+                                                  </a>
+                                                  <br><br>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </td>
+                          </tr>
+
+
+                      </table>
+
+                  </td>
+              </tr>         
+          </table>
+          
+              </td>
+          </tr>
+
+      </table>
+      <!-- end section -->
+
+      
+      ', '2020-04-11 21:25:40', '76', '197','197','197','0','3',
+        '1','0','0','0', '1',
+        '103','rivas025@yahoo.com.mx',''
+    );
