@@ -189,7 +189,7 @@ if ($bloghtml==""){
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title><?php echo $compania_nombre;?> - Blog.</title>
+  <title><?php echo $compania_nombre;?> - Blog</title>
   <meta content="<?php echo $seccionmeta_valortitle;?>" name="title">
   <meta content="<?php echo $seccionmeta_valordescrip;?>" name="description">
   <meta content="<?php echo $seccionmeta_valorkeywords;?>" name="keywords">
