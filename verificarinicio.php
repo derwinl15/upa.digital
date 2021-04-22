@@ -29,6 +29,8 @@ if ($iniuser!=""){
 		header("Location: ../gestiongo/admin/panel");		
 	}else if ($_SESSION[perfilactual]=="108")	{ // Si es registro principal de un centro
 		header("Location: ../gestiongo/admin/adquirirplan?i=1");		
+	}else if ($_SESSION[perfilactual]=="5")	{ // Si es registro principal de un centro
+		header("Location: ../gestiongo/admin/adquirirplan?i=1");		
 	}else{
 		header("Location: ../gestiongo/admin/reservar");		
 	}	

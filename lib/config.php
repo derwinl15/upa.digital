@@ -5,6 +5,12 @@ ini_set ("display_errors","0");
 ini_set ("memory_limit","-1");
 
 (isset($_GET['co'])) ? $getcompaniaalias=$_GET['co'] :$getcompaniaalias='';
+(isset($_GET['referido'])) ? $getreferido=$_GET['referido'] :$getreferido='';
+
+if($getreferido!=""){
+	setcookie("referido",$getreferido, time() + 86400, "/", $_SERVER['HTTP_HOST']); 
+}
+
 
 if($getcompaniaalias!=""){
 

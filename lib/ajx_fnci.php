@@ -149,7 +149,9 @@ function registrarusuario($nombre=null, $apellido=null, $email=null, $clave=null
 
 
 
-	session_start();	
+	session_start();		
+	$getreferido = $_COOKIE["referido"];
+
 
 	$conexion = new ConexionBd();
 
@@ -162,7 +164,7 @@ function registrarusuario($nombre=null, $apellido=null, $email=null, $clave=null
 			$usuario_telf = utf8_encode($valor["usuario_telf"]);						
 			$usuario_emailencontrado = utf8_encode($valor["usuario_email"]);
 
-			if ($usuario_emailencontradoooooooooo==$usuario_email){
+			if ($usuario_emailencontrado==$usuario_email){
 				$texresp ="Error: El email ingresado ya se encuentra registrado en el sistema, por favor verificar que ya no te cuente con una cuenta abierta";	
 
 				$objResponse->addAlert($texresp);
@@ -183,6 +185,14 @@ function registrarusuario($nombre=null, $apellido=null, $email=null, $clave=null
 		}
 	}
 
+	$usuario_idreferido = 0;
+
+	$arrresultado2 = $conexion->doSelect("usuario_id","usuario", "usuario_codigo = '$getreferido' and perfil_id = '5' and cuenta_id = '$SistemaCuentaId' ");
+	if (count($arrresultado2)>0){
+		foreach($arrresultado2 as $i=>$valor){
+			$usuario_idreferido = $valor["usuario_id"];
+		}	
+	}
 
 
 	$codigocliente = generarId();
@@ -201,14 +211,14 @@ function registrarusuario($nombre=null, $apellido=null, $email=null, $clave=null
 		usuario_fechareg, usuario_activo, usuario_eliminado, usuario_img, 
 		perfil_id, 
 		cuenta_id, compania_id, usuario_codverif, usuario_emailverif, l_estatus_id, 
-		usuario_documento, usuario_direccion, usuario_imgdoc, usuario_alias
+		usuario_documento, usuario_direccion, usuario_imgdoc, usuario_alias, usuario_idreferido
 		) 
 	",
 	"'$usuario_email', '$usuario_clave', '$usuario_nombre', '$usuario_apellido', '$usuario_telf',
 	'$fechaactual', '1', '0',  '1.png', 
 	'$perfil',
 	'$SistemaCuentaId','$compania_idcolocar','$codverif','0','$estatusidregistrousuario',
-	'$usuario_documento','$usuario_direccion','2.png', '$usuario_alias'
+	'$usuario_documento','$usuario_direccion','2.png', '$usuario_alias','$usuario_idreferido'
 
 	");
 
