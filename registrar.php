@@ -112,6 +112,17 @@ $arrresultado = $conexion->doSelect("
 
   }
 
+session_start();
+$getreferido = $_COOKIE["referido"];
+if ($getreferido!=""){
+  $divreferido = "
+    <div class='form-group'>
+        <span style='font-weight: 700'>Referido por:</span> $getreferido
+        <div class=''></div>
+    </div>
+  ";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -188,6 +199,7 @@ $arrresultado = $conexion->doSelect("
                   <input type="password" name="password2" class="form-control" id="password2" required="required" placeholder="Repita su Contraseña" />
                   <div class=""></div>
               </div>
+              <?php echo $divreferido;?>
               <div class="text-center"><button type="submit">Registrarse</button>
                <br><br>
                 <a href="<?php echo $baseurl;?>ingresar">
