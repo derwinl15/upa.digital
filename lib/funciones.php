@@ -204,6 +204,7 @@ function AsignarRegistrosCreacionCompania($cuenta=null, $compania_id=null, $cate
       ",
       "'Consumidor Final', '$fechaactual', '1', '0', '1.png', '4','$cuenta','$compania_id','1','cliente@gmail.com'");
 
+      /*
     // Creo Sucursal por Defecto
     $resultado = $conexion->doInsert("
       sucursal
@@ -219,7 +220,7 @@ function AsignarRegistrosCreacionCompania($cuenta=null, $compania_id=null, $cate
         $sucursal_id = ($valor["sucursal_id"]);
       }
     }
-
+    */
     
     $obtenerCodigoLista = 1; 
     $obtenerTipoLista = 46;
@@ -257,11 +258,11 @@ function AsignarRegistrosCreacionCompania($cuenta=null, $compania_id=null, $cate
     $obtenerTipoLista = 4;
     $tipoproducto = ObtenerIdLista($obtenerCodigoLista, $obtenerTipoLista);
 
-    $obtenerCodigoLista = 1; //Producto
+    $obtenerCodigoLista = 2; //Servicio
     $obtenerTipoLista = 7;
     $claseproducto = ObtenerIdLista($obtenerCodigoLista, $obtenerTipoLista);
 
-    $prod_nombre = "Producto General";
+    $prod_nombre = "Servicio General";
 
     $find = array('á', 'é', 'í', 'ó', 'ú', 'ñ');
     $repl = array('a', 'e', 'i', 'o', 'u', 'n');
@@ -296,14 +297,14 @@ function AsignarRegistrosCreacionCompania($cuenta=null, $compania_id=null, $cate
       }
     }
 
-
+    /*
     $resultado = $conexion->doInsert("
     productostock
       (prod_id, sucursal_id, prodstock_cantidad, prodstock_fechareg, prodstock_activo, prodstock_eliminado, cuenta_id, compania_id)
     ",
     "'$prod_id', '$sucursal_id', '10', '$fechaactual', '1', '0','$cuenta','$compania_id'");
 
-
+    */
 
     $obtenerCodigoLista = 0; 
     $obtenerTipoLista = 120;

@@ -37,13 +37,14 @@ $arrresultado = $conexion->doSelect("prod_id, prod_nombre, prod_descrip, prod_st
     ",
     "producto           
       inner join usuario cuenta on cuenta.usuario_id = producto.cuenta_id
+      inner join lista claseproducto on claseproducto.lista_id = producto.l_claseproducto_id    
         inner join compania on compania.compania_id = producto.compania_id
         left join lista tipoproducto on tipoproducto.lista_id = producto.l_tipoproducto_id
         left join lista moneda on moneda.lista_id = producto.l_moneda_id  
         left join lista intervalo on  intervalo.lista_id = producto.l_intervalo_id
         left join lista listaurl on listaurl.lista_id = producto.l_categ_id
     ",
-    "prod_eliminado = '0' $where2 $where ", null, "prod_id desc");
+    "prod_eliminado = '0'  and claseproducto.lista_cod = '2' $where2 $where ", null, "prod_id desc");
 
   foreach($arrresultado as $i=>$valor){
 
@@ -160,8 +161,23 @@ $arrresultado = $conexion->doSelect("prod_id, prod_nombre, prod_descrip, prod_st
 
     ";
 
-
 }
+
+if ($sucursalservicio==""){
+  $sucursalservicio ="
+  <div class='row content'>
+      <div class='col-lg-12' style= 'padding: 10px' data-aos='fade-right'>
+        <div class='alert alert-danger' style='text-align: center; font-weight: normal;'>
+              <a style='color: #000; font-size: 14px; text-decoration: none;'>
+                  No existen servicios creados
+              </a><br>
+          </div>
+      </div>
+  </div>
+  ";
+}
+
+
 
 $arrresultado = ObtenerDatosCompania($SistemaCuentaId, $SistemaCompaniaId);
 foreach($arrresultado as $i=>$valor){
