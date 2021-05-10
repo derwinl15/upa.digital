@@ -4,16 +4,7 @@ define ("M","sistgo_gestion"); //Usuario
 define ("E","sistgo_gestion"); //Bd
 define ("N","localhost"); //Servidor 
 
-
 /*
-
-define ("R","3x0kBfqGE"); //Clave
-define ("M","u875531037_upadigital"); //Usuario
-define ("E","u875531037_upadigital"); //Bd
-define ("N","localhost"); //Servidor 
-
-
-
 define ("R","jj&z6g2HROv"); //Clave
 define ("M","misistemaweb_upadigital"); //Usuario
 define ("E","misistemaweb_upadigital"); //Bd

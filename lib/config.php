@@ -48,7 +48,7 @@ if($getcompaniaalias!=""){
 }
 
 
-//$base = "<base href='http://www.upa.digital/'>";
+//$base = "<base href='https://www.misistemaweb.com/portfolio/upa.digital/'>";
 $base = "<base href='http://localhost/upa.digital/'>";
 
 
@@ -65,7 +65,7 @@ $base = "<base href='http://localhost/upa.digital/'>";
 	define ("style","style.css");
 */
 
-	//define ("UrlFiles","http://www.upa.digital/"); 
+	//define ("UrlFiles","https://www.misistemaweb.com/portfolio/upa.digital/"); 
 	define ("UrlFiles","http://localhost/gestiongo/"); 
 
 	$urlpath = $_SERVER[HTTP_HOST];
