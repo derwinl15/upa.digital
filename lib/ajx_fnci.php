@@ -226,6 +226,7 @@ function registrarusuario($nombre=null, $apellido=null, $email=null, $clave=null
 	if (count($arrresultado2)>0){
 		foreach($arrresultado2 as $i=>$valor){
 			$usuario_id = $valor["usuario_id"];
+
 		}	
 
 
@@ -254,6 +255,32 @@ function registrarusuario($nombre=null, $apellido=null, $email=null, $clave=null
 				foreach($arrresultado2 as $i=>$valor){
 					$compania_id = $valor["compania_id"];
 				}
+
+
+			$resultado = $conexion->doUpdate("gananciausuario", "						
+					compania_id ='$compania_id'
+				",
+				"usuario_id='$usuario_id'");
+
+
+			$obtenerCodigoLista = 2;
+			$obtenerTipoLista = 167;
+			$estatuspagoventa = ObtenerIdLista($obtenerCodigoLista, $obtenerTipoLista);
+
+
+			$resultado = $conexion->doInsert("
+				gananciausuario
+					(compania_id, usuario_id, l_estatus_id,
+					gananciausuario_montototal, gananciausuario_activo,
+					gananciausuario_eliminado, gananciausuario_fechareg, cuenta_id
+					) 
+				",
+				"'$compania_id', '$usuario_idreferido', '$estatuspagoventa',
+				'$gananciausuario_montototal', '1', '0', '$fechaactual', '$cuenta'
+
+				");
+
+
 
 				$resultado = $conexion->doUpdate("usuario", "						
 					compania_id ='$compania_id'

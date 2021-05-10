@@ -19,7 +19,6 @@ $xajax = new xajax('lib/ajx_fnci.php');
 $xajax->registerFunction('registrarusuario');
 
 
-
 $conexion = new ConexionBd();
 
 $arrresultado = ObtenerDatosCompania($SistemaCuentaId, $SistemaCompaniaId);
@@ -112,16 +111,20 @@ $arrresultado = $conexion->doSelect("
 
   }
 
-session_start();
-$getreferido = $_COOKIE["referido"];
-if ($getreferido!=""){
-  $divreferido = "
-    <div class='form-group'>
-        <span style='font-weight: 700'>Referido por:</span> $getreferido
-        <div class=''></div>
-    </div>
-  ";
-}
+
+  session_start();
+  $getreferido = $_COOKIE["referido"];
+  if ($getreferido!=""){
+    $divreferido = "
+      <div class='form-group'>
+          <span style='font-weight: 700'>Referido por:</span> $getreferido
+          <div class=''></div>
+      </div>
+    ";
+  }
+
+
+
 
 ?>
 <!DOCTYPE html>
@@ -198,6 +201,10 @@ if ($getreferido!=""){
               <div class="form-group">
                   <input type="password" name="password2" class="form-control" id="password2" required="required" placeholder="Repita su Contraseña" />
                   <div class=""></div>
+              </div>
+              <div class="form-group">
+                <input type="checkbox" id="terminos" value="terminos" required="required" title="Se debe aceptar los Términos y Condiciones para continuar con el registro"> 
+                <label for="terminos">Acepta los <a href="<?php echo $baseurl; ?>terminos">Términos y Condiciones</a></label>
               </div>
               <?php echo $divreferido;?>
               <div class="text-center"><button type="submit">Registrarse</button>
